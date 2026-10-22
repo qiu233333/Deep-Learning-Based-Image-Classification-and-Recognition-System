@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>管理后台 · 图像分类识别系统</title>
+<link rel="stylesheet" href="/static/style.css">
+<style>
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; margin-bottom:22px; }
+.stat-card { background:var(--panel2); border:1px solid var(--border); border-radius:14px; padding:20px; }
+.stat-card .num { font-size:30px; font-weight:800; color:var(--accent); }
+.stat-card .lbl { color:var(--muted); font-size:13px; margin-top:4px; }
+table { width:100%; border-collapse:collapse; font-size:13px; margin-top:10px; }
+th, td { border-bottom:1px solid var(--border); padding:8px 10px; text-align:left; }
+th { color:var(--muted); font-weight:600; background:var(--panel2); }
+tr:hover td { background:rgba(56,189,248,.06); }
+.flex { display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+select, input, button { background:var(--panel2); color:var(--text); border:1px solid var(--border); border-radius:8px; padding:8px 12px; }
+#trainLog { background:#0b1220; border:1px solid var(--border); border-radius:10px; padding:14px; font-family:Menlo,monospace; font-size:12px; white-space:pre-wrap; max-height:300px; overflow:auto; margin-top:12px; }
+.tag-ok { color:var(--ok); } .tag-run { color:#fbbf24; } .tag-fail { color:var(--bad); }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="logo">⚙️</span>
+    <div><h1>管理后台</h1><p class="subtitle">模型管理 · 训练与微调 · 识别记录与特征存储</p></div>
+  </div>
+  <nav><a href="/">识别台</a><a href="/admin" class="active">管理后台</a></nav>
+</header>
+<main class="container">
+  <div class="cards" id="statCards"></div>
+
+  <section class="panel">
+    <h2>📊 数据集概况（6:2:2 划分）</h2>
+    <div id="datasetStats" style="margin-top:10px;color:var(--muted)"></div>
+  </section>
+
+  <section class="panel">
+    <div class="flex" style="justify-content:space-between">
+      <h2>🧠 模型训练与微调</h2>
+      <div class="flex">
+        <select id="trainModel">
+          <option>resnet18</option><option>resnet34</option>
+          <option>mobilenet_v3_large</option><option>efficientnet_b0</option><option>densenet121</option>
+        </select>
+        <input id="trainEpochs" type="number" value="5" min="1" max="30" style="width:80px">
+        <button id="trainBtn">启动训练</button>
+      </div>
+    </div>
+    <p class="note">训练任务在后台线程执行（迁移学习微调），完成后自动重载模型。最新训练日志如下：</p>
+    <div id="trainLog">（尚无训练日志）</div>
+    <table id="jobsTable" style="margin-top:14px"><thead><tr>
+      <th>任务ID</th><th>模型</th><th>轮数</th><th>状态</th><th>最优验证准确率</th><th>开始时间</th></tr></thead><tbody></tbody></table>
+  </section>
+
+  <section class="panel">
+    <div class="flex" style="justify-content:space-between">
+      <h2>🗃️ 识别记录与特征存储</h2>
+      <div class="flex">
+        <select id="recordModel"><option value="all">全部模型</option></select>
+        <button id="recordRefresh">刷新</button>
+      </div>
+    </div>
+    <table><thead><tr>
+      <th>ID</th><th>原文件名</th><th>模型</th><th>Top-1 结果</th><th>置信度</th><th>图像尺寸</th><th>特征维数</th><th>时间</th></tr></thead>
+      <tbody id="recordRows"></tbody></table>
+  </section>
+</main>
+<footer class="footer">智能系统设计与实践 · 管理后台 · SQLite 持久化</footer>
+<script src="/static/admin.js"></script>
+</body>
+</html>

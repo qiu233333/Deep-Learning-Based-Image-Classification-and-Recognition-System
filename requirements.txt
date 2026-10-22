@@ -1,0 +1,15 @@
+torch>=2.0
+torchvision>=0.15
+numpy
+pillow
+matplotlib
+scipy
+scikit-learn
+flask
+flask-cors
+python-docx
+openpyxl
+requests
+tqdm
+playwright
+imageio-ffmpeg

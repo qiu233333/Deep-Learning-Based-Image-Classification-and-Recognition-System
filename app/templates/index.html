@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>基于深度学习的图像分类识别系统</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="logo">🌼</span>
+    <div>
+      <h1>基于深度学习的图像分类识别系统</h1>
+      <p class="subtitle">花卉细粒度分类 · 102 类 · 多模型对比 · 迁移学习</p>
+    </div>
+  </div>
+  <nav>
+    <a href="/" class="active">识别台</a>
+    <a href="/admin">管理后台</a>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="panel upload-panel">
+    <div class="drop-zone" id="dropZone">
+      <input type="file" id="fileInput" accept="image/*" hidden>
+      <div class="drop-inner" id="dropInner">
+        <div class="upload-icon">🖼️</div>
+        <p class="big">点击选择图像 或 拖拽图像到此处</p>
+        <p class="hint">支持 JPG / PNG / WebP，任意分辨率，将自动预处理为 224×224</p>
+      </div>
+      <img id="preview" class="preview hidden" alt="预览">
+      <button id="clearBtn" class="btn-ghost hidden">✕ 清除</button>
+    </div>
+
+    <div class="model-panel">
+      <h2>① 选择深度模型</h2>
+      <div id="modelList" class="model-list"></div>
+    </div>
+    <button id="classifyBtn" class="btn-primary">🔍 开始识别</button>
+    <div id="status" class="status"></div>
+  </section>
+
+  <section id="resultPanel" class="panel result-panel hidden">
+    <div class="result-head">
+      <div>
+        <h2>识别结果</h2>
+        <div id="meta" class="meta"></div>
+      </div>
+      <div class="result-badge" id="top1Badge"></div>
+    </div>
+    <div id="bars" class="bars"></div>
+    <p class="note">条形长度表示模型输出的 Softmax 概率（Top-5）</p>
+  </section>
+
+  <section class="panel history-panel">
+    <div class="hist-head">
+      <h2>📜 识别历史记录</h2>
+      <button id="refreshBtn" class="btn-mini">刷新</button>
+    </div>
+    <div id="history" class="history-grid"></div>
+  </section>
+</main>
+
+<footer class="footer">智能系统设计与实践 · 小组项目 · Flask + PyTorch（MPS 加速）</footer>
+<script src="/static/app.js"></script>
+</body>
+</html>

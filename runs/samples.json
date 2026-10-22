@@ -1,0 +1,326 @@
+[
+  {
+    "class": "rose",
+    "path": "/Users/qiu/Documents/ChatGPT/系统设计/智能系统设计与实践/data/flower102/test/rose/image_01199.jpg",
+    "top1_prob": 0.9845573902130127,
+    "top5": [
+      [
+        "rose",
+        0.9845573902130127
+      ],
+      [
+        "sword lily",
+        0.0008615257102064788
+      ],
+      [
+        "globe-flower",
+        0.0007396573782898486
+      ],
+      [
+        "bearded iris",
+        0.000645117019303143
+      ],
+      [
+        "frangipani",
+        0.0005302955396473408
+      ]
+    ]
+  },
+  {
+    "class": "sunflower",
+    "path": "/Users/qiu/Documents/ChatGPT/系统设计/智能系统设计与实践/data/flower102/test/sunflower/image_05438.jpg",
+    "top1_prob": 0.9509376287460327,
+    "top5": [
+      [
+        "sunflower",
+        0.9509376287460327
+      ],
+      [
+        "giant white arum lily",
+        0.0018963603070005774
+      ],
+      [
+        "corn poppy",
+        0.0016262978315353394
+      ],
+      [
+        "spear thistle",
+        0.001457543927244842
+      ],
+      [
+        "oxeye daisy",
+        0.001451304997317493
+      ]
+    ]
+  },
+  {
+    "class": "siam tulip",
+    "path": "/Users/qiu/Documents/ChatGPT/系统设计/智能系统设计与实践/data/flower102/test/siam tulip/image_07033.jpg",
+    "top1_prob": 0.9726824760437012,
+    "top5": [
+      [
+        "siam tulip",
+        0.9726824760437012
+      ],
+      [
+        "sword lily",
+        0.0014885134296491742
+      ],
+      [
+        "rose",
+        0.0012716209748759866
+      ],
+      [
+        "snapdragon",
+        0.0010138493962585926
+      ],
+      [
+        "water lily",
+        0.0008345476817339659
+      ]
+    ]
+  },
+  {
+    "class": "water lily",
+    "path": "/Users/qiu/Documents/ChatGPT/系统设计/智能系统设计与实践/data/flower102/test/water lily/image_00315.jpg",
+    "top1_prob": 0.9797942042350769,
+    "top5": [
+      [
+        "water lily",
+        0.9797942042350769
+      ],
+      [
+        "lotus",
+        0.0014137461548671126
+      ],
+      [
+        "anthurium",
+        0.00120988255366683
+      ],
+      [
+        "rose",
+        0.0009219292551279068
+      ],
+      [
+        "magnolia",
+        0.0008268681704066694
+      ]
+    ]
+  },
+  {
+    "class": "hibiscus",
+    "path": "/Users/qiu/Documents/ChatGPT/系统设计/智能系统设计与实践/data/flower102/test/hibiscus/image_01767.jpg",
+    "top1_prob": 0.9593759775161743,
+    "top5": [
+      [
+        "hibiscus",
+        0.9593759775161743
+      ],
+      [
+        "trumpet creeper",
+        0.0025512725114822388
+      ],
+      [
+        "watercress",
+        0.0024884375743567944
+      ],
+      [
+        "canna lily",
+        0.0015924572944641113
+      ],
+      [
+        "mexican petunia",
+        0.0012528501683846116
+      ]
+    ]
+  },
+  {
+    "class": "daffodil",
+    "path": "/Users/qiu/Documents/ChatGPT/系统设计/智能系统设计与实践/data/flower102/test/daffodil/image_05719.jpg",
+    "top1_prob": 0.993553876876831,
+    "top5": [
+      [
+        "daffodil",
+        0.993553876876831
+      ],
+      [
+        "columbine",
+        0.0003359024412930012
+      ],
+      [
+        "magnolia",
+        0.00025063171051442623
+      ],
+      [
+        "windflower",
+        0.00021423156431410462
+      ],
+      [
+        "siam tulip",
+        0.0001975793275050819
+      ]
+    ]
+  },
+  {
+    "class": "canna lily",
+    "path": "/Users/qiu/Documents/ChatGPT/系统设计/智能系统设计与实践/data/flower102/test/canna lily/image_04427.jpg",
+    "top1_prob": 0.9335743188858032,
+    "top5": [
+      [
+        "canna lily",
+        0.9335743188858032
+      ],
+      [
+        "sword lily",
+        0.006146035622805357
+      ],
+      [
+        "wallflower",
+        0.004682296887040138
+      ],
+      [
+        "bearded iris",
+        0.0028242077678442
+      ],
+      [
+        "sunflower",
+        0.002341106068342924
+      ]
+    ]
+  },
+  {
+    "class": "gazania",
+    "path": "/Users/qiu/Documents/ChatGPT/系统设计/智能系统设计与实践/data/flower102/test/gazania/image_04495.jpg",
+    "top1_prob": 0.9683319330215454,
+    "top5": [
+      [
+        "gazania",
+        0.9683319330215454
+      ],
+      [
+        "barbeton daisy",
+        0.0008922600536607206
+      ],
+      [
+        "blanket flower",
+        0.0008889884338714182
+      ],
+      [
+        "canna lily",
+        0.0008591988007538021
+      ],
+      [
+        "orange dahlia",
+        0.0008322102366946638
+      ]
+    ]
+  },
+  {
+    "class": "columbine",
+    "path": "/Users/qiu/Documents/ChatGPT/系统设计/智能系统设计与实践/data/flower102/test/columbine/image_02614.jpg",
+    "top1_prob": 0.9964746832847595,
+    "top5": [
+      [
+        "columbine",
+        0.9964746832847595
+      ],
+      [
+        "monkshood",
+        0.0003093259874731302
+      ],
+      [
+        "desert-rose",
+        0.0001899913331726566
+      ],
+      [
+        "bishop of llandaff",
+        0.00013436502194963396
+      ],
+      [
+        "gaura",
+        0.00013043562648817897
+      ]
+    ]
+  },
+  {
+    "class": "snapdragon",
+    "path": "/Users/qiu/Documents/ChatGPT/系统设计/智能系统设计与实践/data/flower102/test/snapdragon/image_03166.jpg",
+    "top1_prob": 0.9799122214317322,
+    "top5": [
+      [
+        "snapdragon",
+        0.9799122214317322
+      ],
+      [
+        "sweet pea",
+        0.000845717207994312
+      ],
+      [
+        "azalea",
+        0.0008227191283367574
+      ],
+      [
+        "prince of wales feathers",
+        0.0006590565317310393
+      ],
+      [
+        "trumpet creeper",
+        0.0005954874213784933
+      ]
+    ]
+  },
+  {
+    "class": "tiger lily",
+    "path": "/Users/qiu/Documents/ChatGPT/系统设计/智能系统设计与实践/data/flower102/test/tiger lily/image_07174.jpg",
+    "top1_prob": 0.8946751356124878,
+    "top5": [
+      [
+        "tiger lily",
+        0.8946751356124878
+      ],
+      [
+        "fritillary",
+        0.017897840589284897
+      ],
+      [
+        "orange dahlia",
+        0.010181034915149212
+      ],
+      [
+        "geranium",
+        0.003795156255364418
+      ],
+      [
+        "columbine",
+        0.003542764810845256
+      ]
+    ]
+  },
+  {
+    "class": "fritillary",
+    "path": "/Users/qiu/Documents/ChatGPT/系统设计/智能系统设计与实践/data/flower102/test/fritillary/image_03388.jpg",
+    "top1_prob": 0.9952994585037231,
+    "top5": [
+      [
+        "fritillary",
+        0.9952994585037231
+      ],
+      [
+        "gaura",
+        0.0002347365953028202
+      ],
+      [
+        "blackberry lily",
+        0.00016627658624202013
+      ],
+      [
+        "lenten rose",
+        0.00014878733782097697
+      ],
+      [
+        "prince of wales feathers",
+        0.00013552719610743225
+      ]
+    ]
+  }
+]

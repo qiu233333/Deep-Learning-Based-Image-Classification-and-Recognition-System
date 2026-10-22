@@ -1,0 +1,99 @@
+
+########## TRAINING resnet18 @ 12:29:03 ##########
+device: mps
+num_classes: 102
+/Users/qiu/Documents/ChatGPT/系统设计/智能系统设计与实践/.venv/lib/python3.11/site-packages/torch/utils/data/dataloader.py:1102: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, device pinned memory won't be used.
+  super().__init__(loader)
+[resnet18] ep  1 train_loss 4.0910 train_acc 0.1678 | val_loss 3.3820 val_acc 0.3815 | 0.98 min
+[resnet18] ep  2 train_loss 3.0298 train_acc 0.5027 | val_loss 2.5648 val_acc 0.6399 | 0.94 min
+[resnet18] ep  3 train_loss 2.3914 train_acc 0.6966 | val_loss 2.0831 val_acc 0.7869 | 0.94 min
+== epoch 4: 解冻骨干，全量微调 ==
+[resnet18] ep  4 train_loss 1.4523 train_acc 0.8831 | val_loss 1.1386 val_acc 0.9516 | 1.20 min
+[resnet18] ep  5 train_loss 1.0504 train_acc 0.9754 | val_loss 1.0546 val_acc 0.9669 | 1.28 min
+[resnet18] ep  6 train_loss 0.9582 train_acc 0.9923 | val_loss 1.0298 val_acc 0.9706 | 1.21 min
+[resnet18] ep  7 train_loss 0.9150 train_acc 0.9969 | val_loss 1.0078 val_acc 0.9718 | 1.22 min
+[resnet18] ep  8 train_loss 0.8955 train_acc 0.9984 | val_loss 0.9938 val_acc 0.9718 | 1.23 min
+[resnet18] ep  9 train_loss 0.8812 train_acc 0.9982 | val_loss 0.9962 val_acc 0.9663 | 1.23 min
+[resnet18] ep 10 train_loss 0.8733 train_acc 0.9996 | val_loss 0.9885 val_acc 0.9755 | 1.23 min
+[resnet18] ep 11 train_loss 0.8640 train_acc 0.9998 | val_loss 0.9794 val_acc 0.9743 | 1.23 min
+[resnet18] ep 12 train_loss 0.8571 train_acc 0.9998 | val_loss 0.9791 val_acc 0.9755 | 1.26 min
+[resnet18] ep 13 train_loss 0.8548 train_acc 1.0000 | val_loss 0.9684 val_acc 0.9767 | 1.29 min
+[resnet18] ep 14 train_loss 0.8556 train_acc 0.9996 | val_loss 0.9648 val_acc 0.9773 | 1.31 min
+[resnet18] ep 15 train_loss 0.8489 train_acc 1.0000 | val_loss 0.9571 val_acc 0.9792 | 1.28 min
+best val acc = 0.9792
+########## resnet18 exit=0 elapsed=1072s ##########
+
+########## TRAINING resnet34 @ 12:46:55 ##########
+device: mps
+num_classes: 102
+Downloading: "https://download.pytorch.org/models/resnet34-b627a593.pth" to /Users/qiu/.cache/torch/hub/checkpoints/resnet34-b627a593.pth
+  0%|          | 0.00/83.3M [00:00<?, ?B/s]  0%|          | 128k/83.3M [00:00<02:59, 485kB/s]  0%|          | 384k/83.3M [00:00<01:19, 1.10MB/s]  1%|          | 640k/83.3M [00:00<00:56, 1.54MB/s]  1%|          | 1.00M/83.3M [00:00<00:40, 2.16MB/s]  2%|▏         | 1.38M/83.3M [00:00<00:39, 2.18MB/s]  3%|▎         | 2.75M/83.3M [00:01<00:28, 2.97MB/s]  8%|▊         | 6.25M/83.3M [00:01<00:09, 8.63MB/s]  9%|▉         | 7.62M/83.3M [00:01<00:10, 7.84MB/s] 12%|█▏        | 9.62M/83.3M [00:01<00:07, 10.2MB/s] 13%|█▎        | 11.0M/83.3M [00:01<00:07, 10.5MB/s] 15%|█▍        | 12.4M/83.3M [00:01<00:06, 10.8MB/s] 16%|█▋        | 13.6M/83.3M [00:02<00:06, 10.8MB/s] 18%|█▊        | 14.9M/83.3M [00:02<00:06, 10.9MB/s] 19%|█▉        | 16.1M/83.3M [00:02<00:07, 9.03MB/s] 22%|██▏       | 18.2M/83.3M [00:02<00:05, 11.8MB/s] 24%|██▎       | 19.6M/83.3M [00:02<00:05, 11.7MB/s] 25%|██▌       | 20.9M/83.3M [00:02<00:05, 11.7MB/s] 27%|██▋       | 22.1M/83.3M [00:02<00:05, 11.7MB/s] 28%|██▊       | 23.4M/83.3M [00:02<00:05, 11.6MB/s] 30%|██▉       | 24.6M/83.3M [00:03<00:06, 9.16MB/s] 32%|███▏      | 26.8M/83.3M [00:03<00:04, 12.1MB/s] 34%|███▍      | 28.1M/83.3M [00:03<00:04, 11.9MB/s] 35%|███▌      | 29.5M/83.3M [00:03<00:04, 11.8MB/s] 37%|███▋      | 30.8M/83.3M [00:03<00:04, 11.8MB/s] 38%|███▊      | 32.0M/83.3M [00:03<00:04, 11.8MB/s] 40%|███▉      | 33.2M/83.3M [00:03<00:05, 9.34MB/s] 42%|████▏     | 35.4M/83.3M [00:04<00:04, 12.1MB/s] 44%|████▍     | 36.8M/83.3M [00:04<00:04, 12.0MB/s] 46%|████▌     | 38.0M/83.3M [00:04<00:03, 11.9MB/s] 47%|████▋     | 39.2M/83.3M [00:04<00:03, 11.8MB/s] 49%|████▊     | 40.5M/83.3M [00:04<00:03, 11.8MB/s] 50%|█████     | 41.8M/83.3M [00:04<00:04, 9.32MB/s] 53%|█████▎    | 44.0M/83.3M [00:04<00:03, 12.3MB/s] 54%|█████▍    | 45.4M/83.3M [00:04<00:03, 12.1MB/s] 56%|█████▌    | 46.6M/83.3M [00:05<00:03, 12.0MB/s] 57%|█████▋    | 47.9M/83.3M [00:05<00:03, 11.9MB/s] 59%|█████▉    | 49.1M/83.3M [00:05<00:03, 11.8MB/s] 60%|██████    | 50.4M/83.3M [00:05<00:03, 9.31MB/s] 63%|██████▎   | 52.2M/83.3M [00:05<00:02, 11.5MB/s] 64%|██████▍   | 53.5M/83.3M [00:05<00:02, 11.5MB/s] 66%|██████▌   | 54.8M/83.3M [00:05<00:02, 11.6MB/s] 67%|██████▋   | 56.0M/83.3M [00:05<00:02, 11.6MB/s] 69%|██████▊   | 57.2M/83.3M [00:06<00:02, 11.6MB/s] 70%|███████   | 58.5M/83.3M [00:06<00:02, 9.10MB/s] 73%|███████▎  | 60.6M/83.3M [00:06<00:01, 11.9MB/s] 74%|███████▍  | 62.0M/83.3M [00:06<00:01, 11.8MB/s] 76%|███████▌  | 63.2M/83.3M [00:06<00:01, 11.7MB/s] 77%|███████▋  | 64.5M/83.3M [00:06<00:01, 11.7MB/s] 79%|███████▉  | 65.8M/83.3M [00:06<00:01, 11.7MB/s] 80%|████████  | 67.0M/83.3M [00:07<00:01, 9.04MB/s] 83%|████████▎ | 69.1M/83.3M [00:07<00:01, 11.9MB/s] 85%|████████▍ | 70.5M/83.3M [00:07<00:01, 11.7MB/s] 86%|████████▌ | 71.8M/83.3M [00:07<00:01, 11.6MB/s] 88%|████████▊ | 73.0M/83.3M [00:07<00:01, 8.65MB/s] 89%|████████▉ | 74.2M/83.3M [00:07<00:00, 9.49MB/s] 92%|█████████▏| 76.5M/83.3M [00:07<00:00, 12.6MB/s] 94%|█████████▎| 78.0M/83.3M [00:08<00:00, 9.99MB/s] 95%|█████████▌| 79.2M/83.3M [00:08<00:00, 10.1MB/s] 98%|█████████▊| 81.4M/83.3M [00:08<00:00, 9.79MB/s]100%|██████████| 83.3M/83.3M [00:08<00:00, 10.2MB/s]
+/Users/qiu/Documents/ChatGPT/系统设计/智能系统设计与实践/.venv/lib/python3.11/site-packages/torch/utils/data/dataloader.py:1102: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, device pinned memory won't be used.
+  super().__init__(loader)
+[resnet34] ep  1 train_loss 4.0635 train_acc 0.1643 | val_loss 3.3897 val_acc 0.3840 | 1.06 min
+[resnet34] ep  2 train_loss 2.9877 train_acc 0.5306 | val_loss 2.5465 val_acc 0.6828 | 1.11 min
+[resnet34] ep  3 train_loss 2.3289 train_acc 0.7218 | val_loss 2.0646 val_acc 0.7783 | 1.10 min
+== epoch 4: 解冻骨干，全量微调 ==
+[resnet34] ep  4 train_loss 1.3462 train_acc 0.8942 | val_loss 1.1019 val_acc 0.9467 | 1.46 min
+[resnet34] ep  5 train_loss 0.9847 train_acc 0.9835 | val_loss 1.0158 val_acc 0.9651 | 1.53 min
+[resnet34] ep  6 train_loss 0.9224 train_acc 0.9929 | val_loss 0.9848 val_acc 0.9724 | 1.53 min
+[resnet34] ep  7 train_loss 0.8881 train_acc 0.9974 | val_loss 0.9733 val_acc 0.9700 | 1.60 min
+[resnet34] ep  8 train_loss 0.8750 train_acc 0.9990 | val_loss 0.9789 val_acc 0.9694 | 1.65 min
+[resnet34] ep  9 train_loss 0.8683 train_acc 0.9976 | val_loss 0.9577 val_acc 0.9743 | 2.00 min
+[resnet34] ep 10 train_loss 0.8565 train_acc 0.9982 | val_loss 0.9477 val_acc 0.9731 | 1.63 min
+[resnet34] ep 11 train_loss 0.8461 train_acc 0.9990 | val_loss 0.9502 val_acc 0.9706 | 1.56 min
+[resnet34] ep 12 train_loss 0.8396 train_acc 0.9990 | val_loss 0.9356 val_acc 0.9767 | 1.51 min
+[resnet34] ep 13 train_loss 0.8394 train_acc 0.9986 | val_loss 0.9387 val_acc 0.9718 | 1.49 min
+[resnet34] ep 14 train_loss 0.8318 train_acc 0.9994 | val_loss 0.9173 val_acc 0.9786 | 1.49 min
+[resnet34] ep 15 train_loss 0.8345 train_acc 0.9984 | val_loss 0.9147 val_acc 0.9780 | 1.57 min
+best val acc = 0.9786
+########## resnet34 exit=0 elapsed=2423s ##########
+
+########## TRAINING mobilenet_v3_large @ 13:09:26 ##########
+device: mps
+num_classes: 102
+/Users/qiu/Documents/ChatGPT/系统设计/智能系统设计与实践/.venv/lib/python3.11/site-packages/torch/utils/data/dataloader.py:1102: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, device pinned memory won't be used.
+  super().__init__(loader)
+[mobilenet_v3_large] ep  1 train_loss 2.8182 train_acc 0.5131 | val_loss 1.4911 val_acc 0.8677 | 1.19 min
+[mobilenet_v3_large] ep  2 train_loss 1.4519 train_acc 0.8747 | val_loss 1.3256 val_acc 0.9161 | 1.00 min
+[mobilenet_v3_large] ep  3 train_loss 1.2889 train_acc 0.9207 | val_loss 1.2654 val_acc 0.9320 | 1.05 min
+== epoch 4: 解冻骨干，全量微调 ==
+[mobilenet_v3_large] ep  4 train_loss 1.1191 train_acc 0.9671 | val_loss 1.1102 val_acc 0.9663 | 1.50 min
+[mobilenet_v3_large] ep  5 train_loss 1.0182 train_acc 0.9860 | val_loss 1.0623 val_acc 0.9700 | 1.40 min
+[mobilenet_v3_large] ep  6 train_loss 0.9760 train_acc 0.9937 | val_loss 1.0322 val_acc 0.9731 | 1.39 min
+[mobilenet_v3_large] ep  7 train_loss 0.9412 train_acc 0.9969 | val_loss 1.0126 val_acc 0.9761 | 1.37 min
+[mobilenet_v3_large] ep  8 train_loss 0.9262 train_acc 0.9972 | val_loss 1.0038 val_acc 0.9822 | 1.35 min
+[mobilenet_v3_large] ep  9 train_loss 0.9107 train_acc 0.9994 | val_loss 0.9926 val_acc 0.9798 | 1.36 min
+[mobilenet_v3_large] ep 10 train_loss 0.9002 train_acc 0.9990 | val_loss 0.9862 val_acc 0.9798 | 1.35 min
+[mobilenet_v3_large] ep 11 train_loss 0.8889 train_acc 0.9992 | val_loss 0.9769 val_acc 0.9829 | 1.35 min
+[mobilenet_v3_large] ep 12 train_loss 0.8825 train_acc 0.9996 | val_loss 0.9731 val_acc 0.9816 | 1.35 min
+[mobilenet_v3_large] ep 13 train_loss 0.8718 train_acc 1.0000 | val_loss 0.9606 val_acc 0.9822 | 1.36 min
+[mobilenet_v3_large] ep 14 train_loss 0.8688 train_acc 0.9996 | val_loss 0.9596 val_acc 0.9841 | 1.36 min
+[mobilenet_v3_large] ep 15 train_loss 0.8632 train_acc 0.9998 | val_loss 0.9601 val_acc 0.9822 | 1.35 min
+best val acc = 0.9841
+########## mobilenet_v3_large exit=0 elapsed=3612s ##########
+
+########## TRAINING efficientnet_b0 @ 13:29:14 ##########
+device: mps
+num_classes: 102
+/Users/qiu/Documents/ChatGPT/系统设计/智能系统设计与实践/.venv/lib/python3.11/site-packages/torch/utils/data/dataloader.py:1102: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, device pinned memory won't be used.
+  super().__init__(loader)
+[efficientnet_b0] ep  1 train_loss 3.9769 train_acc 0.2514 | val_loss 3.3178 val_acc 0.5848 | 1.29 min
+[efficientnet_b0] ep  2 train_loss 2.9357 train_acc 0.6254 | val_loss 2.5493 val_acc 0.7648 | 1.20 min
+[efficientnet_b0] ep  3 train_loss 2.3328 train_acc 0.7722 | val_loss 2.0711 val_acc 0.8340 | 1.20 min
+== epoch 4: 解冻骨干，全量微调 ==
+[efficientnet_b0] ep  4 train_loss 1.5302 train_acc 0.8731 | val_loss 1.2350 val_acc 0.9302 | 1.96 min
+[efficientnet_b0] ep  5 train_loss 1.1651 train_acc 0.9536 | val_loss 1.1008 val_acc 0.9633 | 1.94 min
+[efficientnet_b0] ep  6 train_loss 1.0464 train_acc 0.9811 | val_loss 1.0461 val_acc 0.9724 | 1.97 min
+[efficientnet_b0] ep  7 train_loss 0.9920 train_acc 0.9898 | val_loss 1.0163 val_acc 0.9761 | 1.99 min
+[efficientnet_b0] ep  8 train_loss 0.9499 train_acc 0.9937 | val_loss 0.9878 val_acc 0.9810 | 1.99 min
+[efficientnet_b0] ep  9 train_loss 0.9276 train_acc 0.9967 | val_loss 0.9745 val_acc 0.9804 | 1.98 min
+[efficientnet_b0] ep 10 train_loss 0.9107 train_acc 0.9967 | val_loss 0.9637 val_acc 0.9810 | 2.00 min
+[efficientnet_b0] ep 11 train_loss 0.8970 train_acc 0.9992 | val_loss 0.9499 val_acc 0.9816 | 2.00 min
+[efficientnet_b0] ep 12 train_loss 0.8885 train_acc 0.9982 | val_loss 0.9384 val_acc 0.9822 | 2.05 min
+[efficientnet_b0] ep 13 train_loss 0.8779 train_acc 0.9990 | val_loss 0.9345 val_acc 0.9829 | 1.92 min
+[efficientnet_b0] ep 14 train_loss 0.8733 train_acc 0.9982 | val_loss 0.9264 val_acc 0.9804 | 2.02 min
+[efficientnet_b0] ep 15 train_loss 0.8661 train_acc 0.9998 | val_loss 0.9232 val_acc 0.9804 | 2.03 min
+best val acc = 0.9829
+########## efficientnet_b0 exit=0 elapsed=5269s ##########
+ALL TRAINING DONE

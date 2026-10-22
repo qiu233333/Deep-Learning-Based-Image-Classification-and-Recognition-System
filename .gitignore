@@ -1,0 +1,30 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# 原始下载与运行时数据
+data/102flowers.tgz
+data/imagelabels.mat
+data/setid.mat
+data/download_*.log
+data/flowers_raw/
+data/system.db
+uploads/*
+!uploads/.gitkeep
+
+# 训练中间产物
+models/*_last.pt
+models/*_job*.pt
+runs/*_job*.json
+runs/demo.webm
+
+# 打包产物
+docs/智能系统设计与实践-提交材料.zip
+
+# 系统
+.DS_Store
+
+# 解压出的提交包副本（与仓库根目录内容重复）
+docs/智能系统设计与实践-提交材料/
